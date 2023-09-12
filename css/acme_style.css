@@ -1,0 +1,537 @@
+@charset "utf-8";
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+hr {
+    display: none;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+body, input, button, textarea, th, td, select {
+    color: #333;
+    font-family: 'Sen' ,sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 0.1rem;
+    height: 0.1rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* header */
+#header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+/* header top */
+#header .top {
+    background-color: #222;
+}
+#header .top .inn {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 1rem 2.4rem;
+}
+#header .top .inn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9f9f9;
+    text-decoration: none;
+}
+#header .top .inn a small {
+    display: inline-block;
+    margin: 1.2rem;
+    padding: 0.6rem 2rem;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+    background-color: #eb5757;
+    transition: all 0.3s;
+}
+#header .top .inn a small:hover {
+    color: #222;
+    background-color: #fff;
+}
+#header .top .inn a .title {
+    font-size: 1.8rem;
+}
+
+
+/* header bottom */
+#header .bottom {
+    background-color: #eb5757;
+}
+#header .bottom .inn {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 2rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .bottom .inn .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .bottom .inn .nav .btnNav {
+    cursor: pointer;
+    display: none;
+}
+#header .bottom .inn .nav .menu {
+    display: flex;
+}
+#header .bottom .inn .nav .menu li {
+    margin: 0 1rem;
+}
+#header .bottom .inn .nav .menu li a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.4rem;
+    color: #f9f9f9;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+#header .bottom .inn .nav .menu li a:hover {
+    background-color: #222;
+}
+#header .bottom .inn .nav .cart {
+    position: relative;
+    padding: 0.8rem 2rem;
+    border: 0;
+    border-radius: 0.4rem;
+    color: #f9f9f9;
+    font-size: 1.5rem;
+    background-color: #222;
+    cursor: pointer;
+}
+#header .bottom .inn .nav .cart:after {
+    content: '0';
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0.05rem;
+    border: 1px solid #f9f9f9;
+    border-radius: 50%;
+    color: #222;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: #fff;
+}
+
+
+/* container */
+/* visual_top */
+#container {
+    padding-top: 13.3rem;
+}
+#container .visual_top {
+    position: relative;
+    background: url(./../img/visual_top.jpg) no-repeat 40% 40% / cover;
+}
+#container .visual_top:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(34,34,34,0.4);
+}
+#container .visual_top .inn {
+    position: relative;
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 10rem 2.4rem ;
+    z-index: 1;
+}
+#container .visual_top .inn .title {
+    margin-bottom: 2rem;
+    color: #f9f9f9;
+    font-size: 6.3rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+}
+#container .visual_top .inn .desc {
+    margin-bottom: 2rem;
+    color: #f9f9f9;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+}
+#container .visual_top .inn .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #f9f9f9;
+    border-radius: 0.4rem;
+    color: #f9f9f9;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s;
+}
+#container .visual_top .inn .btn:hover {
+    color: #222;
+    background-color: #fff;
+}
+
+
+/* about */
+#about .inn {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 6.5rem 2.4rem;
+}
+#about .inn ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+#about .inn ul li {
+    flex: 1;
+}
+#about .inn ul li em {
+    font-style: normal;
+}
+#about .inn ul li .title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+#about .inn ul li .desc {
+    line-height: 1.5;
+}
+
+#about .inn .list {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#about .inn .list .section .thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 30rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #222;
+}
+#about .inn .list .section .thumb img {
+    position: absolute;
+    right: 0;
+    top: 70%;
+}
+#about .inn .list .section .thumb em {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    color:#f9f9f9;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: normal;
+}
+#about .inn .list .section .thumb strong {
+    color: #f9f9f9;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+}
+#about .inn .list .section .text .desc {
+    padding: 0 2rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+/* visual_bottom */
+.visual_bottom {
+    position: relative;
+    background: url(./../img/visual_bottom.jpg) no-repeat 50% 60% / cover;
+}
+.visual_bottom:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(34,34,34,0.4);
+}
+.visual_bottom .inn {
+    position: relative;
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 10rem 2.4rem ;
+    z-index: 1;
+    text-align: right;
+}
+.visual_bottom .inn .title {
+    margin-bottom: 2rem;
+    color: #f9f9f9;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+}
+.visual_bottom .inn .desc {
+    margin-bottom: 2rem;
+    color: #f9f9f9;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+}
+.visual_bottom .inn .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #f9f9f9;
+    border-radius: 0.4rem;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.visual_bottom .inn .btn:hover {
+    border-color: #eb5757;
+    color: #fff;
+    background-color: #eb5757;
+}
+
+
+/* shop */
+#shop .inn {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 6.5rem 2.4rem;
+}
+#shop .inn .titleArea {
+    margin-bottom: 4rem;
+}
+#shop .inn .titleArea em {
+    font-style: normal;
+}
+#shop .inn .titleArea .title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* shop product */
+.product {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.product .list {
+    text-align: center;
+}
+
+.product .list a {
+    text-decoration: none;
+}
+.product .list a .thumb {
+    max-width: 36rem;
+    height: 50rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.product .list a .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product .list a .thumb.on {
+    position: relative;
+}
+.product .list a .thumb.on span.sale {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    display: block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    color: #f9f9f9;
+    font-weight: 600;
+    background-color: #eb5757;
+    animation: blink 0.7s ease-in-out infinite alternate;
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.product .list a .textArea .title {
+    color: #222;
+    font-size: 2.2rem;
+    line-height: 1.6;
+}
+.product .list a .textArea .price em {
+    color: #222;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: normal;
+}
+.product .list a .textArea .pay {
+    display: inline-block;
+}
+.product .list a .textArea .sale {
+    display: inline-block;
+    border-radius: 5px;
+    color: #eb5757;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.product .list .btn {
+    display: inline-block;
+    color: #f9f9f9;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: #eb5757;
+    transition: all 0.3s;
+}
+.product .list .btn:hover {
+    background-color: #222;
+}
+
+#shop .inn .more {
+    text-align: center;
+    padding-top: 4rem;    
+}
+#shop .inn .more .btnMore {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background-color: #222;
+    transition: all 0.3s;
+}
+#shop .inn .more .btnMore:hover {
+    background-color: #eb5757;
+}
+
+
+/* local */
+#local .inn {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 5rem 2.4rem;
+}
+#local .inn .thumb {
+    position: absolute;
+    left: 3%;
+    width: 45rem;
+    height: 45rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    z-index: 10;
+}
+#local .inn .thumb img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#local .inn .text {
+    width: 90%;
+    padding: 6rem 10rem 6rem 40rem;
+    border-radius: 1rem;
+    background-color: #222;
+}
+#local .inn .text .title {
+    margin-bottom: 2rem;
+    color: #f9f9f9;
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+#local .inn .text p {
+    padding-bottom: 2rem;
+    color: #f9f9f9;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+#local .inn .text strong {
+    color: #f9f9f9;
+    font-weight: 700;
+}
+
+/* footer */
+#footer {
+    position: relative;
+    background-color: #222;
+}
+#footer .inn {
+    max-width: 114rem;
+    margin: 0 auto; 
+    padding: 4rem 2.4rem;
+}
+#footer .inn .footerArea { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+#footer .inn .footerArea .sns {
+    display: flex;
+    justify-content: center;
+}
+#footer .inn .footerArea .sns li a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #efefef;
+    font-size: 3rem;
+    transition: all 0.3s;
+}
+#footer .inn .footerArea .sns li a:hover {
+    color: #333;
+    background-color: #efefef;
+}
+#footer .inn .copyright {
+    color: #f9f9f9;
+    font-size: 1.2rem;
+    text-align: center;
+}
+#footer .inn .copyright a {
+    color: #eb5757;
+}

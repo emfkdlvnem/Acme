@@ -1,0 +1,232 @@
+@media screen and (max-width: 990px) {
+    /* header top */
+    #header .top .inn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    /* header bottom */
+    #header .bottom .inn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    #header .bottom .inn .nav {
+        flex-direction: row-reverse;
+    }
+    #header .bottom .inn .nav .btnNav {
+        display: block;
+        margin-left: 2rem;
+        border: 0;
+        color: #f9f9f9;
+        font-size: 2rem;
+        background: none;
+    }
+    #header .bottom .inn .nav .btnNav.on + .menu {
+        display: block;
+    }
+    #header .bottom .inn .nav .menu {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 13rem;
+        right: 0;
+        padding: 5rem 0;
+        flex-direction: column;
+        text-align: center;
+        z-index: 100;
+        background-color: #eb5757;
+    }
+    #header .bottom .inn .nav .menu li {
+        margin-bottom: 2rem;
+    }
+    #header .bottom .inn .nav .cart {
+        padding: 0.5rem 1.2rem;
+    }
+    #header .bottom .inn .nav .cart:after {
+        right: -15%;
+        top: -25%;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.2rem;
+    }
+    /* container visual_top */
+    #container .visual_top .inn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    #container .visual_top .inn .title {
+        font-size: 5.5rem;
+    }
+    /* container content */
+    #about .inn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    #about .inn .list .section .thumb strong {
+        font-size: 3.2rem;
+    }
+    /* container visual_bottom */
+    .visual_bottom .inn  {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    .visual_bottom .inn .title {
+        font-size: 4.2rem;
+    }
+    .visual_bottom .inn .desc  {
+        font-size: 1.5rem;
+    }
+    /* shop */
+    #shop .inn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    /* shop product */
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+    .product .list a .thumb {
+        min-width: 100%;
+        height: 35rem;
+    }
+    /* local */
+    #local .inn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    /* footer */
+    #footer .inn {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    /* local */
+    #local .inn .thumb {
+        width: 35rem;
+    }
+    #local .inn .text {
+        padding-left: 35rem;
+    }
+}
+@media screen and (max-width: 826px) {
+    /* local */
+    #local .inn {
+        position: static;
+        flex-direction: column;
+    }
+    #local .inn .thumb {
+        position: static;
+        width: 100%;
+    }
+    #local .inn .text {
+        width: 100%;
+        padding: 6rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* container content */
+    #about .inn ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #about .inn ul li .title {
+        margin-bottom: 2rem;
+    } 
+    #about .inn .list {
+        grid-gap: 4rem;
+        grid-template-columns: 1fr;
+    }
+    #about .inn .list .section .thumb {
+        margin-bottom: 2rem;
+    }
+    /* sjop product */
+    .product {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width:665px) {
+    /* visual_top */
+    #container .visual_top .inn .title {
+        font-size: 4.8rem;
+    }
+    #container .visual_top .inn .desc {
+        font-size: 1.6rem;
+    }
+    /* visual_bottom */
+    .visual_bottom .inn .title {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    /* header top */
+    #header .top .inn a {
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+    /* header bottom */
+    #header .bottom .inn .nav .menu {
+        top: 195px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* header bottom */
+    #header .bottom .inn {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    /* visual_top */
+    #container .visual_top .inn {
+        display: flex;
+        flex-direction: column;
+        padding-top: 35rem;
+        padding-bottom: 5rem;
+    }
+    #container .visual_top .inn .title {
+        font-size: 4rem;
+    }
+    /* content */
+    #about .inn ul li .title {
+        font-size: 3.6rem;
+    }
+    /* visual_bottom */
+    .visual_bottom .inn {
+        display: flex;
+        flex-direction: column;
+        padding-top: 35rem;
+        padding-bottom: 5rem;
+    }
+    .visual_bottom .inn .title {
+        font-size: 3rem;
+    }
+    /* shop */
+    #shop .inn .titleArea .title {
+        font-size: 3.6rem;
+    }
+    #shop .inn .more .btnMore {
+        display: block;
+    }
+    /* local */
+    #local .inn {
+        padding: 5rem 0 0;
+    }
+    #local .inn .text {
+        border-radius: 0;
+    }
+    /* footer */
+    #footer .inn .footerArea {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    #footer .inn .footerArea .logo {
+        margin-bottom: 3rem;
+    }
+    #footer .inn .footerArea .sns li a {
+    padding: 0.5rem 2rem;
+    }
+}
